@@ -1,0 +1,23 @@
+﻿<Window x:Class="AplicacionVisualStudio.DialogoEjercicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionVisualStudio"
+        mc:Ignorable="d"
+        Title="DialogoEjercicio" Height="450" Width="800">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="245" Margin="219,59,0,0" Stroke="Black" VerticalAlignment="Top" Width="287"/>
+        <Label Content="Ejercicio" HorizontalAlignment="Left" Margin="270,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Peso" HorizontalAlignment="Left" Margin="270,121,0,0" VerticalAlignment="Top"/>
+        <Label Content="Atleta" HorizontalAlignment="Left" Margin="270,152,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="270,183,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Center" Validation.Error="Validation_Error" Text="{Binding Path=Nombre,NotifyOnValidationError=True,ValidatesOnDataErrors=True}"  Margin="0,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Center" Validation.Error="Validation_Error" Text="{Binding Path=Peso,NotifyOnValidationError=True,ValidatesOnDataErrors=True}" Margin="0,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Center" Text="{Binding Path=Atleta}" Margin="0,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <DatePicker HorizontalAlignment="Center" SelectedDate="{Binding Path=Fecha}" Margin="0,182,0,0"  VerticalAlignment="Top" Width="143" RenderTransformOrigin="0.224,0.398" Height="35"/>
+        <Button x:Name="BotonRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="262,253,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.106,0.596" Click="BotonRegistrar_Click"/>
+        <Button x:Name="BotonCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="422,253,0,0" VerticalAlignment="Top" Click="BotonCancelar_Click"/>
+
+    </Grid>
+</Window>
